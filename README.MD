@@ -8,6 +8,50 @@ StringHasherBenchmark.decomposed3           avgt    5   87.047 ± 0.234  ns/op
 StringHasherBenchmark.decomposed3Reordered  avgt    5   86.724 ± 0.432  ns/op
 StringHasherBenchmark.oneLine               avgt    5  112.551 ± 0.251  ns/op
 
+StringHasherBenchmark.decomposed1                                 avgt    5    88.821 ±  1.472      ns/op
+StringHasherBenchmark.decomposed1:CPI                             avgt          0.531           clks/insn
+StringHasherBenchmark.decomposed1:IPC                             avgt          1.882           insns/clk
+StringHasherBenchmark.decomposed1:L1-dcache-load-misses           avgt          0.417                #/op
+StringHasherBenchmark.decomposed1:L1-dcache-loads                 avgt        249.084                #/op
+StringHasherBenchmark.decomposed1:L1-dcache-stores                avgt         62.273                #/op
+StringHasherBenchmark.decomposed1:L1-icache-load-misses           avgt          0.137                #/op
+StringHasherBenchmark.decomposed1:LLC-load-misses                 avgt          0.004                #/op
+StringHasherBenchmark.decomposed1:LLC-loads                       avgt          0.038                #/op
+StringHasherBenchmark.decomposed1:LLC-store-misses                avgt          0.021                #/op
+StringHasherBenchmark.decomposed1:LLC-stores                      avgt          0.059                #/op
+StringHasherBenchmark.decomposed1:branch-misses                   avgt          0.013                #/op
+StringHasherBenchmark.decomposed1:branches                        avgt         93.126                #/op
+StringHasherBenchmark.decomposed1:cycles                          avgt        586.947                #/op
+StringHasherBenchmark.decomposed1:dTLB-load-misses                avgt          0.008                #/op
+StringHasherBenchmark.decomposed1:dTLB-loads                      avgt        246.341                #/op
+StringHasherBenchmark.decomposed1:dTLB-store-misses               avgt         ≈ 10⁻⁴                #/op
+StringHasherBenchmark.decomposed1:dTLB-stores                     avgt         61.757                #/op
+StringHasherBenchmark.decomposed1:iTLB-load-misses                avgt          0.002                #/op
+StringHasherBenchmark.decomposed1:iTLB-loads                      avgt          0.006                #/op
+StringHasherBenchmark.decomposed1:instructions                    avgt       1104.612                #/op
+
+StringHasherBenchmark.oneLine                                     avgt    5   120.365 ± 11.348      ns/op
+StringHasherBenchmark.oneLine:CPI                                 avgt          0.578           clks/insn
+StringHasherBenchmark.oneLine:IPC                                 avgt          1.731           insns/clk
+StringHasherBenchmark.oneLine:L1-dcache-load-misses               avgt          0.462                #/op
+StringHasherBenchmark.oneLine:L1-dcache-loads                     avgt        247.546                #/op
+StringHasherBenchmark.oneLine:L1-dcache-stores                    avgt         61.618                #/op
+StringHasherBenchmark.oneLine:L1-icache-load-misses               avgt          0.154                #/op
+StringHasherBenchmark.oneLine:LLC-load-misses                     avgt          0.010                #/op
+StringHasherBenchmark.oneLine:LLC-loads                           avgt          0.042                #/op
+StringHasherBenchmark.oneLine:LLC-store-misses                    avgt          0.020                #/op
+StringHasherBenchmark.oneLine:LLC-stores                          avgt          0.060                #/op
+StringHasherBenchmark.oneLine:branch-misses                       avgt          0.108                #/op
+StringHasherBenchmark.oneLine:branches                            avgt         95.661                #/op
+StringHasherBenchmark.oneLine:cycles                              avgt        703.349                #/op
+StringHasherBenchmark.oneLine:dTLB-load-misses                    avgt          0.010                #/op
+StringHasherBenchmark.oneLine:dTLB-loads                          avgt        244.157                #/op
+StringHasherBenchmark.oneLine:dTLB-store-misses                   avgt         ≈ 10⁻⁴                #/op
+StringHasherBenchmark.oneLine:dTLB-stores                         avgt         61.536                #/op
+StringHasherBenchmark.oneLine:iTLB-load-misses                    avgt          0.001                #/op
+StringHasherBenchmark.oneLine:iTLB-loads                          avgt          0.007                #/op
+StringHasherBenchmark.oneLine:instructions                        avgt       1217.463                #/op
+
 8 core, AMD
 
 StringHasherBenchmark.oneLine  avgt    5  148.262 ± 5.626  ns/op
