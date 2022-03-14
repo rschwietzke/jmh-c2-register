@@ -1,6 +1,13 @@
 # Manual Decoupling
 
 ```
+4 core Intel i7-7700K CPU @ 4.20GHz
+StringHasherBenchmark.decomposed1           avgt    5   87.883 ± 3.075  ns/op
+StringHasherBenchmark.decomposed2           avgt    5   86.983 ± 0.299  ns/op
+StringHasherBenchmark.decomposed3           avgt    5   87.047 ± 0.234  ns/op
+StringHasherBenchmark.decomposed3Reordered  avgt    5   86.724 ± 0.432  ns/op
+StringHasherBenchmark.oneLine               avgt    5  112.551 ± 0.251  ns/op
+
 8 core, AMD
 
 StringHasherBenchmark.oneLine  avgt    5  148.262 ± 5.626  ns/op
