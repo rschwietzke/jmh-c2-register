@@ -34,13 +34,30 @@ public class StringHasherBenchmark
     @Benchmark
     public int oneLine()
     {
-        return StringHasher.hashShiftingOneLine(DEMO);
+        return StringHasher.oneLine(DEMO);
+    }
+
+    @Benchmark
+    public int decomposed1()
+    {
+        return StringHasher.decomposed1(DEMO);
+    }
+
+    @Benchmark
+    public int decomposed2()
+    {
+        return StringHasher.decomposed2(DEMO);
+    }
+
+    @Benchmark
+    public int decomposed3()
+    {
+        return StringHasher.decomposed3(DEMO);
     }
     
     @Benchmark
-    public int split()
+    public int decomposed3Reordered()
     {
-        return StringHasher.hashShiftingSplit(DEMO);
+        return StringHasher.decomposed3Reordered(DEMO);
     }
-
 }
