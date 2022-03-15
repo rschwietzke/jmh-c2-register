@@ -1,4 +1,37 @@
-# Manual Decoupling
+# Manual Code Optimisation
+While building a hash implementation for a custom character buffer, we noticed that a manual optimization of the code to allow in theory more independent CPU work suprisingly worked. As a side note, this is based on the traditional hash implementation for Strings in the JDK because we assumed that multiplication by 31 is automatically replaced by the compiler with a shift and substraction. So we started rather with a a test if this optimization is done and by accident discovered that manual code reshaping works.
+
+## String Hashing
+```java
+for (int i = 0; i < s.length(); i++) 
+{
+    final char c = s.charAt(i);
+    hash = 31 * hash + c;
+}
+```
+
+## Improved by Shifting
+```java
+for (int i = 0; i < s.length(); i++) 
+{
+    final char c = s.charAt(i);
+    hash = (hash << 5) + c - hash;
+}
+``` 
+
+## Improved by Hinting Independent Operations
+```java
+for (int i = 0; i < s.length(); i++) 
+{
+    final char c = s.charAt(i);
+
+    int h1 = hash << 5; // * 32
+    int h2 = c - hash; // - 1 * hash aka the before was * 31
+    hash = h1 + h2;
+}
+```
+
+## Measurements
 
 ```
 4 core Intel i7-7700K CPU @ 4.20GHz
