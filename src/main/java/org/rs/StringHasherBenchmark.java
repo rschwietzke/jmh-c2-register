@@ -32,6 +32,12 @@ public class StringHasherBenchmark
     }
     
     @Benchmark
+    public int original()
+    {
+        return StringHasher.original(DEMO);
+    }
+    
+    @Benchmark
     public int oneLine()
     {
         return StringHasher.oneLine(DEMO);
