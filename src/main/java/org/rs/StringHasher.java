@@ -5,6 +5,19 @@ import org.junit.Test;
 
 public class StringHasher
 {
+    public static int original(final CharSequence s)
+    {
+        int hash = 0;
+
+        for (int i = 0; i < s.length(); i++) 
+        {
+            final char c = s.charAt(i);
+            hash = 31 * hash + c;
+        }
+        
+        return hash;
+    } 
+        
     public static int oneLine(final CharSequence s)
     {
         int hash = 0;
@@ -112,6 +125,7 @@ public class StringHasher
         {
             public void test(final String s)
             {
+                Assert.assertEquals(s.hashCode(), original(s));
                 Assert.assertEquals(s.hashCode(), oneLine(s));
                 Assert.assertEquals(s.hashCode(), decomposed1(s));
                 Assert.assertEquals(s.hashCode(), decomposed2(s));
