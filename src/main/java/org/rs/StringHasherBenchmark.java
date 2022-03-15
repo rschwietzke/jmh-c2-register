@@ -44,6 +44,12 @@ public class StringHasherBenchmark
     }
 
     @Benchmark
+    public int oneLineReordered()
+    {
+        return StringHasher.oneLineReordered(DEMO);
+    }
+    
+    @Benchmark
     public int decomposed1()
     {
         return StringHasher.decomposed1(DEMO);

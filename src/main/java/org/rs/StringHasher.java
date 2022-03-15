@@ -30,6 +30,19 @@ public class StringHasher
 
         return hash;
     } 
+
+    public static int oneLineReordered(final CharSequence s)
+    {
+        int hash = 0;
+
+        for (int i = 0; i < s.length(); i++) 
+        {
+            final char c = s.charAt(i);
+            hash = (c - hash) + (hash << 5);
+        }
+
+        return hash;
+    } 
     
     public static int decomposed1(final CharSequence s)
     {
@@ -127,6 +140,7 @@ public class StringHasher
             {
                 Assert.assertEquals(s.hashCode(), original(s));
                 Assert.assertEquals(s.hashCode(), oneLine(s));
+                Assert.assertEquals(s.hashCode(), oneLineReordered(s));
                 Assert.assertEquals(s.hashCode(), decomposed1(s));
                 Assert.assertEquals(s.hashCode(), decomposed2(s));
                 Assert.assertEquals(s.hashCode(), decomposed3(s));
