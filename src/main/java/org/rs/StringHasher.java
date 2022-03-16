@@ -52,8 +52,8 @@ public class StringHasher
         {
             final char c = s.charAt(i);
 
-            int h1 = hash << 5; // * 32
-            int h2 = c - hash; // - 1 * hash aka the before was * 31
+            int h1 = hash << 5;
+            int h2 = c - hash; 
             hash = h1 + h2;
         }
 

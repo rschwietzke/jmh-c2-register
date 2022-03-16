@@ -31,11 +31,11 @@ public class StringHasherBenchmark
         DEMO = new String(DEMO);
     }
     
-    @Benchmark
-    public int original()
-    {
-        return StringHasher.original(DEMO);
-    }
+//    @Benchmark
+//    public int original()
+//    {
+//        return StringHasher.original(DEMO);
+//    }
     
     @Benchmark
     public int oneLine()
@@ -55,21 +55,21 @@ public class StringHasherBenchmark
         return StringHasher.decomposed1(DEMO);
     }
 
-    @Benchmark
-    public int decomposed2()
-    {
-        return StringHasher.decomposed2(DEMO);
-    }
-
-    @Benchmark
-    public int decomposed3()
-    {
-        return StringHasher.decomposed3(DEMO);
-    }
-    
-    @Benchmark
-    public int decomposed3Reordered()
-    {
-        return StringHasher.decomposed3Reordered(DEMO);
-    }
+//    @Benchmark
+//    public int decomposed2()
+//    {
+//        return StringHasher.decomposed2(DEMO);
+//    }
+//
+//    @Benchmark
+//    public int decomposed3()
+//    {
+//        return StringHasher.decomposed3(DEMO);
+//    }
+//    
+//    @Benchmark
+//    public int decomposed3Reordered()
+//    {
+//        return StringHasher.decomposed3Reordered(DEMO);
+//    }
 }
