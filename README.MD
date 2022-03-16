@@ -12,7 +12,9 @@ for (int i = 0; i < s.length(); i++)
 }
 ```
 
-## Shifting (which will be done automatically)
+## Shifting
+This is done automatically by the compiler but you can of course also write that down.
+
 ```java
 for (int i = 0; i < s.length(); i++) 
 {
